@@ -1,21 +1,36 @@
-import { routing } from "@/i18n/routing";
-import { Globe } from "lucide-react";
+"use client";
+
 import { useLocale } from "next-intl";
-import LocaleSwitcherSelect from "./LocaleSwitcherSelect";
+import { useParams } from "next/navigation";
+import { Locale, routing, usePathname, useRouter } from "@/i18n/routing";
 
 export default function LocaleSwitcher() {
   const locale = useLocale();
 
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useParams();
+
+  const onSelectChange = (nextLocale: string) => {
+    router.replace(
+      // @ts-expect-error -- TypeScript will validate that only known `params`
+      // are used in combination with a given `pathname`. Since the two will
+      // always match for the current route, we can skip runtime checks.
+      { pathname, params },
+      { locale: nextLocale as Locale }
+    );
+  };
+
   return (
-    <div className='flex items-center gap-2'>
-      <Globe className='h-4 w-4 text-muted-foreground' />
-      <LocaleSwitcherSelect defaultValue={locale} label='Select a locale'>
-        {routing.locales.map((cur) => (
-          <option key={cur} value={cur}>
-            {cur}
-          </option>
-        ))}
-      </LocaleSwitcherSelect>
+    <div
+      className="border border-white py-1 px-[6px] cursor-pointer"
+      onClick={() => {
+        const upcomingLang = locale === "en" ? "ru" : "en";
+        onSelectChange(upcomingLang);
+      }}
+    >
+      {/* Hiển thị locale hiện tại từ next-intl */}
+      <p className="uppercase font-tektur">{locale}</p>
     </div>
   );
 }
