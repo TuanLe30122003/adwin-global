@@ -1,4 +1,3 @@
-import Image from "next/image";
 import LocaleSwitcher from "./LocaleSwitcher";
 
 export default function Header() {

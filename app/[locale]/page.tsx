@@ -1,5 +1,4 @@
 import Container from "@/components/Container";
-import { Link } from "@/i18n/routing";
 import { getTranslations } from "next-intl/server";
 
 export default async function HomePage() {
