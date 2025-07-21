@@ -4,17 +4,22 @@
     "welcome": {
       "title": "Welcome to the home page"
     },
-    "contact": "Go to the contact page"
-  },
-  "contactForm": {
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
-    "submit": "Submit"
-  },
-  "validation": {
-    "invalid": "Email invalid",
-    "required": "Name required",
-    "min": "Message required to be at least 10 characters"
+    "heroViews": {
+      "1": {
+        "title": "Your Trusted Provider",
+        "description": "Pioneer in the accounts agency industry  with a\nsubsidies providing virtual card with greatest cost.\nOne stop solution for affiliater"
+      },
+      "2": {
+        "title": "Virtual Card",
+        "description": "Virtual cards are issued through API systems,\ntier 1 BIN and unlimited cards replenishment.\nReady for buyer and companies"
+      }
+    },
+    "headline": "FACEBOOK ACCOUNT AGENCY",
+    "cta": "Contact us",
+    "features": {
+      "smartPixel": "Smart pixel",
+      "refundPolicy": "Refund Policy",
+      "support247": "Support 24/7"
+    }
   }
 }

@@ -12,6 +12,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
+				// Đổi tên màu đen để tránh nhầm lẫn với background
+				primaryGreen: '#37FD76', // Màu xanh lá cây mới
+				deepDark: '#050D10',     // Màu đen mới, được đổi tên
+
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {
@@ -59,13 +63,11 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				// --- Các font cục bộ của bạn ---
 				"geist-sans": ["var(--font-geist-sans)", ...fontFamily.sans],
 				"geist-mono": ["var(--font-geist-mono)", ...fontFamily.mono],
-				// --- Các font Google Fonts mới ---
-				inter: ["var(--font-inter)", ...fontFamily.sans], // Thêm Inter
-				tektur: ["var(--font-tektur)", ...fontFamily.sans], // Thêm Tektur
-				orbitron: ["var(--font-orbitron)", ...fontFamily.sans], // Thêm Orbitron
+				inter: ["var(--font-inter)", ...fontFamily.sans],
+				tektur: ["var(--font-tektur)", ...fontFamily.sans],
+				orbitron: ["var(--font-orbitron)", ...fontFamily.sans],
 			},
 		}
 	},

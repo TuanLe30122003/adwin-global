@@ -5,7 +5,15 @@ interface ContainerProps {
 }
 
 const Container = ({ children, className }: ContainerProps) => {
-  return <div className={`px-16 w-full ${className || ""}`}>{children}</div>;
+  return (
+    <div
+      className={`lg:px-16 md:px-10 min-[400px]:px-10 px-4 w-full ${
+        className || ""
+      }`}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Container;
