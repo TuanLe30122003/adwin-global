@@ -10,7 +10,7 @@ body {
   background-image: url('/images/Sides_effect_background.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size:cover;
 }
 
 .gradient-1 {
@@ -25,6 +25,27 @@ body {
   color: transparent;
 }
 
+.clippath-two-side {
+  clip-path: polygon(
+    0px 0px,
+    calc(100% - 20px) 0px,
+    100% 20px,
+    100% 100%,
+    20px 100%,
+    0px calc(100% - 20px)
+  );
+}
+
+.clippath-top-side {
+  clip-path: polygon(
+    0px 0px,
+    calc(100% - 20px) 0px,
+    100% 20px,
+    100% 100%,
+    20px 100%,
+    0px calc(100% - 20px)
+  );
+}
 
 @layer base {
   :root {

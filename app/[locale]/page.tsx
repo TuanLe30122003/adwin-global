@@ -1,3 +1,4 @@
+import AboutAdwin from "@/components/Home/AboutAdwin/AboutAdwin";
 import Hero from "@/components/Home/Hero/Hero";
 import { getTranslations } from "next-intl/server";
 
@@ -27,13 +28,31 @@ export default async function HomePage() {
     },
   ];
 
+  const AboutData = [
+    {
+      title: "$15M+",
+      des: "Monthly spending",
+    },
+
+    {
+      title: "1000+",
+      des: "Media buying teams",
+    },
+
+    {
+      title: "5Y>",
+      des: "Experiences",
+    },
+  ];
+
   return (
     <div>
       {" "}
-      <div className="w-full background-effect-1">
+      <div className="w-full background-effect-1 xl:min-h-[120vh] min-[2800px]:min-h-[135vh] flex flex-col justify-start items-center">
         <Hero heroData={heroData} />
       </div>
-      <div className="h-[1000px]"></div>
+      <AboutAdwin aboutData={AboutData} />
+      <div className="w-full h-[1000px]"></div>
     </div>
   );
 }
