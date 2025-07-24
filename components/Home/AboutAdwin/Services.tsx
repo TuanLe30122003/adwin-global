@@ -1,5 +1,8 @@
+"use client";
+
 import Container from "@/components/Common/Container";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface IServiceItemProps {
   item: {
@@ -7,6 +10,7 @@ interface IServiceItemProps {
     title: string;
     des: string;
   };
+  index: number;
 }
 
 const SERVICE_DATA = [
@@ -34,17 +38,23 @@ const SERVICE_DATA = [
 
 const Services = () => {
   return (
-    <Container className="flex flex-row gap-9 w-full max-w-[1440px]">
-      {SERVICE_DATA.map((item) => {
-        return <ServiceItem item={item} />;
+    <Container className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9 w-full max-w-[1440px] mt-10">
+      {SERVICE_DATA.map((item, index) => {
+        return <ServiceItem key={index} item={item} index={index} />;
       })}
     </Container>
   );
 };
 
-const ServiceItem = ({ item }: IServiceItemProps) => {
+const ServiceItem = ({ item, index }: IServiceItemProps) => {
   return (
-    <div className="border border-primaryGreen p-8 flex flex-col items-start h-[300px] basis-1/4">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="border border-primaryGreen p-8 flex flex-col items-start md:min-h-[300px] basis-1/4 bg-[#0C1618]"
+    >
       <div className="w-[50px] h-[50px] bg-primaryGreen flex justify-center items-center mb-5">
         <img src={item.icon} alt="service" />
       </div>
@@ -52,10 +62,10 @@ const ServiceItem = ({ item }: IServiceItemProps) => {
       <h4 className="text-xl text-white font-orbitron whitespace-pre-line mb-[10px]">
         {item.title}
       </h4>
-      <p className="font-inter text-lg text-white whitespace-pre-line max-w-[80%]">
+      <p className="font-inter text-base text-white whitespace-pre-line max-w-[80%] text-[#D9D9D9]">
         {item.des}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

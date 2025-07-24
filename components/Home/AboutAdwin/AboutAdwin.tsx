@@ -63,7 +63,7 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
 
   return (
     <div className="flex flex-col items-center justify-start gap-6">
-      <Container className="flex lg:flex-row flex-col py-6 bg-transparent max-w-[1440px] xl:mt-[-30px] mt-16 justify-between lg:items-start items-center gap-12">
+      <Container className="flex lg:flex-row flex-col py-6 bg-transparent max-w-[1440px] xl:mt-[-30px] md:mt-16 mt-4 justify-between lg:items-start items-center gap-12">
         <motion.div
           className="flex flex-col gap-4"
           variants={textVariants as any}
@@ -94,7 +94,7 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
         >
-          <div className="flex flex-row gap-12">
+          <div className="flex flex-row md:gap-12 gap-4 ">
             {aboutData?.map((feature, idx) => (
               <motion.div
                 className="flex flex-col gap-4 items-start justify-center"
@@ -104,7 +104,7 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
                 <h3 className="text-primaryGreen font-semibold font-tektur text-3xl">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-white opacity-70 font-normal">
+                <p className="md:text-sm text-xs text-white opacity-70 font-normal">
                   {feature.des}
                 </p>
               </motion.div>
@@ -112,7 +112,7 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
           </div>
 
           <motion.div
-            className="border border-primaryGreen py-5 px-10 flex flex-row  gap-12 items-center w-[470px]"
+            className="border border-primaryGreen py-5 md:px-10 px-4 flex flex-row md:gap-12 gap-4 items-center md:w-[470px]"
             variants={cardContainerVariants as any}
           >
             <div className="flex flex-row">
@@ -133,8 +133,6 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
           </motion.div>
         </motion.div>
       </Container>
-
-      <Services />
     </div>
   );
 };

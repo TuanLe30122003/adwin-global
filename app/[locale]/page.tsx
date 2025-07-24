@@ -1,5 +1,8 @@
 import AboutAdwin from "@/components/Home/AboutAdwin/AboutAdwin";
+import GeneralInfo from "@/components/Home/AboutAdwin/GeneralInfo";
+import Services from "@/components/Home/AboutAdwin/Services";
 import Hero from "@/components/Home/Hero/Hero";
+import Result from "@/components/Home/Result/Result";
 import { getTranslations } from "next-intl/server";
 
 export default async function HomePage() {
@@ -51,8 +54,13 @@ export default async function HomePage() {
       <div className="w-full background-effect-1 xl:min-h-[120vh] min-[2800px]:min-h-[135vh] flex flex-col justify-start items-center">
         <Hero heroData={heroData} />
       </div>
-      <AboutAdwin aboutData={AboutData} />
-      <div className="w-full h-[1000px]"></div>
+      <div className="w-full flex flex-col items-center">
+        <AboutAdwin aboutData={AboutData} />
+        <Services />
+        <GeneralInfo />
+        <Result />
+      </div>
+      <div className="w-full h-[100px]"></div>
     </div>
   );
 }

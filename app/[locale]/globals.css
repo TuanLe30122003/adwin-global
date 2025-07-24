@@ -17,6 +17,10 @@ body {
   background: linear-gradient(180deg, #0C1618 3.82%, #37FD76 198.56%);
 }
 
+.gradient-2 {
+  background: linear-gradient(103.69deg, #002619 19.12%, #37FD76 186.85%);
+}
+
 .gradient-banner-text {
   background: radial-gradient(51.24% 441.29% at 50% 50%, #B6CDCF 0%, rgba(225, 245, 246, 0) 100%);
   -webkit-background-clip: text;

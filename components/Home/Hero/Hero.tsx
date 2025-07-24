@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Container from "@/components/Common/Container";
 import CustomButton from "@/components/Common/CustomButton";
 import Image from "next/image";
@@ -27,6 +27,14 @@ const Hero = ({ heroData }: HeroProps) => {
   const activeView = useMemo(() => {
     return heroData.find((view) => view.id === activeHeroView);
   }, [activeHeroView, heroData]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveHeroView((prev) => (prev === 1 ? 2 : 1));
+    }, 7000); // đổi sau 7 giây
+
+    return () => clearInterval(interval); // Clear khi unmount
+  }, []);
 
   // Các variants cho animation
   const containerVariants = {
