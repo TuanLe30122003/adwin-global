@@ -13,9 +13,9 @@ import Header from "@/components/Common/Header";
 
 // Khai báo font Inter
 const inter = Inter({
-  subsets: ["latin"], // Quan trọng: Chọn subset phù hợp để tối ưu dung lượng
-  variable: "--font-inter", // Đặt biến CSS
-  display: "swap", // Tùy chọn: Cách font hiển thị trong khi tải
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 // Khai báo font Tektur
@@ -44,8 +44,16 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Adwin",
+  title: "Adwin - Facebook account agency",
   description: "Offcial website of Adwin",
+  // --- THÊM PHẦN NÀY ĐỂ CẤU HÌNH FAVICON ---
+  icons: {
+    icon: "/images/logo_tab.svg", // Đường dẫn đến favicon.ico trong thư mục public
+    // Bạn có thể thêm các biểu tượng khác ở đây
+    // apple: '/apple-icon.png', // Ví dụ cho biểu tượng Apple Touch Icon
+    // shortcut: '/icon.png', // Ví dụ cho shortcut icon
+  },
+  // ------------------------------------------
 };
 
 export default async function RootLayout({

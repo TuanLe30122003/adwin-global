@@ -125,7 +125,7 @@ const Hero = ({ heroData }: HeroProps) => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeHeroView.toString() + "-image"} // Key thay đổi để kích hoạt AnimatePresence
-            className={`md:w-[40%] sm:w-[50%] 2xl:w-[30%] md:pr-0 sm:pr-6 pr-0 z-1`}
+            className={`md:w-[40%] sm:w-[50%] 2xl:w-[30%] md:pr-0 sm:pr-6 pr-0 z-1 mb-2`}
             variants={imageVariants as any}
             initial="initial"
             animate="animate"

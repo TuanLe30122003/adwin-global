@@ -4,6 +4,7 @@ import Container from "@/components/Common/Container";
 import React from "react";
 import { Plus } from "lucide-react";
 import { motion } from "framer-motion";
+import Services from "./Services";
 
 interface AboutAdwinProps {
   aboutData: {
@@ -46,8 +47,22 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
     },
   };
 
+  const Partner = [
+    {
+      url: "/images/PartnerBrand/brand1.svg",
+    },
+
+    {
+      url: "/images/PartnerBrand/brand2.svg",
+    },
+
+    {
+      url: "/images/PartnerBrand/brand3.svg",
+    },
+  ];
+
   return (
-    <div className="flex flex-col items-center justify-start">
+    <div className="flex flex-col items-center justify-start gap-6">
       <Container className="flex lg:flex-row flex-col py-6 bg-transparent max-w-[1440px] xl:mt-[-30px] mt-16 justify-between lg:items-start items-center gap-12">
         <motion.div
           className="flex flex-col gap-4"
@@ -101,11 +116,13 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
             variants={cardContainerVariants as any}
           >
             <div className="flex flex-row">
-              {[1, 2, 3].map((_, idx) => (
+              {Partner.map((_, idx) => (
                 <div
-                  className="w-[46px] h-[46px] border border-primaryGreen bg-gray-500 rounded-full ml-[-4px]"
+                  className="w-[46px] h-[46px] border border-primaryGreen rounded-full ml-[-4px] flex flex-row justify-center items-center overflow-hidden"
                   key={idx}
-                ></div>
+                >
+                  <img src={_.url} alt="" />
+                </div>
               ))}
               <div className="w-[46px] h-[46px] bg-primaryGreen rounded-full ml-[-4px] flex flex-row justify-center items-center">
                 <Plus className="text-black" />
@@ -116,6 +133,8 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
           </motion.div>
         </motion.div>
       </Container>
+
+      <Services />
     </div>
   );
 };

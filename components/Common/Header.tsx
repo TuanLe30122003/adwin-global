@@ -42,11 +42,12 @@ export default function Header() {
 
   return (
     <div
-      className={`flex flex-row w-full md:px-12 py-10 items-center px-6 justify-between fixed top-0 left-0 right-0 z-[9999]
+      className={`flex flex-row w-full md:px-12 py-4 items-center px-6 justify-between fixed top-0 left-0 right-0 z-[9999]
         ${
           scrolled
-            ? "bg-black rounded-full mx-auto md:w-[80%] w-[90%] px-14 py-4 mt-6 transition-all duration-300"
-            : ""
+            ? "bg-black"
+            : // ? "bg-black rounded-full mx-auto md:w-[80%] w-[90%] px-14 py-4 mt-6 transition-all duration-300"
+              ""
         }
       `}
     >
