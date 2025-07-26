@@ -2,6 +2,7 @@ import AboutAdwin from "@/components/Home/AboutAdwin/AboutAdwin";
 import GeneralInfo from "@/components/Home/AboutAdwin/GeneralInfo";
 import Services from "@/components/Home/AboutAdwin/Services";
 import ComingSoon from "@/components/Home/ComingSoon/ComingSoon";
+import Contests from "@/components/Home/Contests/Contests";
 import Features from "@/components/Home/Features/Features";
 import Hero from "@/components/Home/Hero/Hero";
 import Result from "@/components/Home/Result/Result";
@@ -63,6 +64,7 @@ export default async function HomePage() {
         <Result />
         <ComingSoon />
         <Features />
+        <Contests />
       </div>
       <div className="w-full h-[100px]"></div>
     </div>

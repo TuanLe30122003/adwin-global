@@ -95,7 +95,7 @@ const FeatureSection = ({
             >
               {title}
             </h3>
-            <p className="font-inter md:text-base text-sm text-white mt-2 max-w-[400px] opacity-70 line-clamp-4">
+            <p className="font-inter md:text-base/[28px] text-sm text-white mt-2 max-w-[400px] opacity-70 line-clamp-4">
               {description}
             </p>
           </div>

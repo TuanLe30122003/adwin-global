@@ -118,13 +118,13 @@ const Result = () => {
             {/* Navigation */}
             <div className="flex flex-row min-[400px]:justify-start justify-center items-center gap-4 mt-6">
               <div
-                className="w-[42px] h-[42px] rounded-full bg-white flex justify-center items-center cursor-pointer"
+                className="w-[42px] h-[42px] rounded-full bg-white flex justify-center items-center cursor-pointer hover:bg-primaryGreen transition-all duration-150"
                 onClick={handlePrev}
               >
                 <MoveLeft className="text-black" size={20} />
               </div>
               <div
-                className="w-[42px] h-[42px] rounded-full bg-white flex justify-center items-center cursor-pointer"
+                className="w-[42px] h-[42px] rounded-full bg-white flex justify-center items-center cursor-pointer hover:bg-primaryGreen transition-all duration-150"
                 onClick={handleNext}
               >
                 <MoveRight className="text-black" size={20} />
