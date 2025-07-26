@@ -16,7 +16,7 @@ body {
 .background-effect-2 {
   background-image: url('/images/ComingSoonBG.png');
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: top;
   background-size:cover;
 }
 

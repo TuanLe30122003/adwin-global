@@ -35,7 +35,7 @@ export default async function HomePage() {
   ];
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       {" "}
       <div className="w-full background-effect-1 xl:min-h-[120vh] min-[2800px]:min-h-[135vh] flex flex-col justify-start items-center">
         <Hero heroData={heroData} />
