@@ -138,21 +138,21 @@
         "id": "01",
         "title": "Charge from only 1%",
         "description": "Compromised cost for advertiser and company! Simply just a commission. Pay only when you top-up balance, everything else is free!",
-        "icon": "/images/Feature/icon1.svg",
+        "icon": "/images/Feature/Icon1.svg",
         "buttonText": "See more"
       },
       {
         "id": "02",
         "title": "Trusted BIN",
         "description": "BIN from Hongkong, US, Singapore\nand much more!",
-        "icon": "/images/Feature/icon2.svg",
+        "icon": "/images/Feature/Icon2.svg",
         "buttonText": "See more"
       },
       {
         "id": "03",
         "title": "Instant replenishment",
         "description": "Instant replenishment and unlimited issuance of cards. Best for affiliate marketing and company usages",
-        "icon": "/images/Feature/icon3.svg",
+        "icon": "/images/Feature/Icon3.svg",
         "buttonText": "See more"
       }
     ],
