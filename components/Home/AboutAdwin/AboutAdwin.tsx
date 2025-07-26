@@ -125,9 +125,11 @@ const AboutAdwin = () => {
           </div>
 
           <motion.div
-            className="border border-primaryGreen py-5 md:px-10 px-4 flex flex-row md:gap-12 gap-4 items-center md:w-[470px]"
+            className="border border-primaryGreen py-5 md:px-16 px-8 flex flex-row md:gap-12 gap-4 items-center md:w-[470px] relative"
             variants={cardContainerVariants as any}
           >
+            <div className="absolute right-[-24px] top-[-24px] w-12 h-12 border-b border-primaryGreen rotate-45 z-11 bg-[#050D10]"></div>
+
             <div className="flex flex-row">
               {Partner.map((_, idx) => (
                 <div
@@ -145,6 +147,8 @@ const AboutAdwin = () => {
             <p className="text-2xl text-white font-tektur">
               {t("partner")} {/* Fetches "Partner" or "Партнер" */}
             </p>
+
+            <div className="absolute left-[-24px] bottom-[-24px] w-12 h-12 border-t border-primaryGreen rotate-45 z-11 bg-[#050D10]"></div>
           </motion.div>
         </motion.div>
       </Container>

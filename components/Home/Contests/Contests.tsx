@@ -47,7 +47,7 @@ const Contests = () => {
   };
 
   return (
-    <Container className="flex flex-col max-w-[1440px] w-full mt-40 overflow-hidden">
+    <Container className="flex flex-col max-w-[1440px] w-full mt-40">
       <AnimatePresence mode="wait" custom={direction}>
         {" "}
         {/* Pass custom prop to AnimatePresence */}
@@ -85,12 +85,18 @@ const ContestItem = ({
 }: ContestItemProps) => {
   return (
     <div className="flex flex-col md:flex-row justify-start items-start gap-10">
-      <div className="flex flex-row justify-center items-center md:w-auto w-full">
-        <img
-          src={image}
-          alt="contest"
-          className="lg:min-w-[500px] min-w-[300px] rounded-lg object-cover"
-        />
+      <div className="relative w-full flex justify-center items-center">
+        <div className="flex flex-row justify-start items-center md:w-auto w-full relative">
+          <img
+            src={image}
+            alt="contest"
+            className="lg:min-w-[500px] min-w-[300px] object-cover"
+          />
+
+          <div className="absolute left-0 top-[-36px] h-9 w-[250px] border-t border-l border-r border-primaryGreen z-10">
+            <div className="absolute right-[-24px] top-[-24px] w-12 h-12 border-b border-primaryGreen rotate-45 z-20 bg-[#050D10]"></div>
+          </div>
+        </div>
       </div>
 
       <div className="flex flex-col justify-between h-full lg:min-h-[350px]">
