@@ -64,10 +64,9 @@ const Result = () => {
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0, x: direction > 0 ? 100 : -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: direction > 0 ? -100 : 100 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
           className="flex lg:flex-row flex-col justify-between w-full lg:items-start items-center lg:gap-24 gap-10"
         >
           {/* Left: Image */}

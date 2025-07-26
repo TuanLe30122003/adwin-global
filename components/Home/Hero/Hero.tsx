@@ -73,7 +73,7 @@ const Hero = ({ heroData }: HeroProps) => {
   };
 
   return (
-    <Container className="pt-[150px] flex md:flex-row flex-col w-full justify-between sm:items-start items-center relative md:h-[100vh] md:max-h-[800px] md:min-h-[700px] h-full gap-4 max-w-[1440px]">
+    <Container className="pt-[150px] flex md:flex-row flex-col w-full justify-between sm:items-start items-center relative md:h-[100vh] md:max-h-[800px] md:min-h-[700px] h-full gap-4 max-w-[1440px] overflow-hidden">
       <motion.div
         className="flex flex-col sm:items-start items-center lg:mt-12 sm:mt-8 mt-4 z-10"
         variants={containerVariants}
@@ -133,7 +133,7 @@ const Hero = ({ heroData }: HeroProps) => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeHeroView.toString() + "-image"} // Key thay đổi để kích hoạt AnimatePresence
-            className={`md:w-[40%] sm:w-[50%] 2xl:w-[30%] md:pr-0 sm:pr-6 pr-0 z-1 mb-2`}
+            className={`md:w-[40%] sm:w-[50%] 2xl:w-[30%] md:pr-0 sm:pr-6 pr-0 z-1 mb-10`}
             variants={imageVariants as any}
             initial="initial"
             animate="animate"
@@ -147,7 +147,7 @@ const Hero = ({ heroData }: HeroProps) => {
             />
           </motion.div>
         </AnimatePresence>
-        <h2 className="font-tektur font-medium lg:text-[70px] absolute bottom-0 gradient-banner-text text-4xl md:flex hidden">
+        <h2 className="font-tektur font-medium py-2 lg:text-[70px] absolute bottom-0 gradient-banner-text text-4xl md:flex hidden">
           {activeView?.headline}
         </h2>
       </div>

@@ -118,13 +118,13 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
             <div className="flex flex-row">
               {Partner.map((_, idx) => (
                 <div
-                  className="w-[46px] h-[46px] border border-primaryGreen rounded-full ml-[-4px] flex flex-row justify-center items-center overflow-hidden"
+                  className="md:w-[46px] md:h-[46px] w-[36px] h-[36px] border border-primaryGreen rounded-full ml-[-4px] flex flex-row justify-center items-center overflow-hidden"
                   key={idx}
                 >
                   <img src={_.url} alt="" />
                 </div>
               ))}
-              <div className="w-[46px] h-[46px] bg-primaryGreen rounded-full ml-[-4px] flex flex-row justify-center items-center">
+              <div className="md:w-[46px] md:h-[46px] w-[36px] h-[36px] bg-primaryGreen rounded-full ml-[-4px] flex flex-row justify-center items-center">
                 <Plus className="text-black" />
               </div>
             </div>

@@ -62,7 +62,7 @@ const ServiceItem = ({ item, index }: IServiceItemProps) => {
       <h4 className="text-xl text-white font-orbitron whitespace-pre-line mb-[10px]">
         {item.title}
       </h4>
-      <p className="font-inter text-base text-white whitespace-pre-line max-w-[80%] text-[#D9D9D9]">
+      <p className="font-inter text-base whitespace-pre-line max-w-[80%] text-[#D9D9D9]">
         {item.des}
       </p>
     </motion.div>
