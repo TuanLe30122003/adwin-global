@@ -7,7 +7,7 @@
     "heroViews": {
       "1": {
         "title": "Your Trusted Provider",
-        "description": "Pioneer in the accounts agency industry  with a\nsubsidies providing virtual card with greatest cost.\nOne stop solution for affiliater"
+        "description": "Pioneer in the accounts agency industry with a\nsubsidies providing virtual card with greatest cost.\nOne stop solution for affiliater"
       },
       "2": {
         "title": "Virtual Card",
@@ -20,6 +20,173 @@
       "smartPixel": "Smart pixel",
       "refundPolicy": "Refund Policy",
       "support247": "Support 24/7"
+    },
+    "aboutAdwin": {
+      "title": "About Adwin",
+      "description": "Pioneering in the Facebook accounts rental service with many\nlarge teams serving affiliate marketing community. Issuing virtual\ncards backed by solid financial support.",
+      "partner": "Partner",
+      "stats": [
+        {
+          "title": "$15M+",
+          "description": "Monthly spending"
+        },
+        {
+          "title": "1000+",
+          "description": "Media buying teams"
+        },
+        {
+          "title": "5Y>",
+          "description": "Experiences"
+        }
+      ]
+    },
+    "serviceFeatures": [
+      {
+        "icon": "images/ServiceFeatures/icon1.svg",
+        "title": "All Verticals\nAccepted",
+        "description": "BH, GH, WH are all accepted"
+      },
+      {
+        "icon": "images/ServiceFeatures/icon2.svg",
+        "title": "Diverse, Scalable\nAccounts",
+        "description": "Include all types of accounts and unlimited spending"
+      },
+      {
+        "icon": "images/ServiceFeatures/icon3.svg",
+        "title": "High-Quality,\nWarmed-up Assets",
+        "description": "Include old and well-spent accounts, pre-warmed up!"
+      },
+      {
+        "icon": "images/ServiceFeatures/icon4.svg",
+        "title": "Support around\nthe clock",
+        "description": "Personal support team in hand 24/7"
+      }
+    ],
+    "generalInfo": {
+      "smartPixel": {
+        "title": "Smart Pixel Integration for Instant Launch & Optimization",
+        "button": "See more"
+      },
+      "geoSupport": {
+        "title": "All GEOs,\nCurrencies\n& Time Zones\nSupported",
+        "items": [
+          "Correct IP & GEO matching",
+          "Local currency settings",
+          "Matching time zones"
+        ]
+      },
+      "speedAndScale": {
+        "title": "Built for\nSpeed & Scale",
+        "items": [
+          "Warmed-up, aged accounts",
+          "AdsPower license",
+          "Dedicated VPS",
+          "Browser setup included"
+        ]
+      }
+    },
+    "results": {
+      "labels": {
+        "campaignsPrefix": "Results from",
+        "campaignsSuffix": "campaigns",
+        "approacher": "Appoacher",
+        "costPerResult": "Cost per result",
+        "totalExpenditure": "Total expenditure",
+        "statusEnd": "End"
+      },
+      "views": [
+        {
+          "image": "/images/Results/Result1.png",
+          "dateRange": "From March 01, 2025 to April 11, 2025",
+          "campaignCount": 23,
+          "approacher": "6,041,965",
+          "costPerResult": "$51.97",
+          "totalExpenditure": "$124,209.95",
+          "status": "In process"
+        },
+        {
+          "image": "/images/Results/Result2.png",
+          "dateRange": "From March 11, 2025 - April 11, 2025",
+          "campaignCount": 108,
+          "approacher": "29,415,509",
+          "costPerResult": "$ ---",
+          "totalExpenditure": "$65,421.27",
+          "status": "In process"
+        },
+        {
+          "image": "/images/Results/Result3.png",
+          "dateRange": "February 15, 2025 - April 17, 2025",
+          "campaignCount": 23,
+          "approacher": "16,347,235",
+          "costPerResult": "$ ---",
+          "totalExpenditure": "$1,853,633",
+          "status": "Ongoing"
+        },
+        {
+          "image": "/images/Results/Result4.png",
+          "dateRange": "February 3, 2025 - June 26, 2025",
+          "campaignCount": 23,
+          "approacher": "483,006",
+          "costPerResult": "$59.96",
+          "totalExpenditure": "$1,486,089",
+          "status": "In process"
+        }
+      ]
+    },
+    "featureSections": [
+      {
+        "id": "01",
+        "title": "Charge from only 1%",
+        "description": "Compromised cost for advertiser and company! Simply just a commission. Pay only when you top-up balance, everything else is free!",
+        "icon": "/images/Feature/icon1.svg",
+        "buttonText": "See more"
+      },
+      {
+        "id": "02",
+        "title": "Trusted BIN",
+        "description": "BIN from Hongkong, US, Singapore\nand much more!",
+        "icon": "/images/Feature/icon2.svg",
+        "buttonText": "See more"
+      },
+      {
+        "id": "03",
+        "title": "Instant replenishment",
+        "description": "Instant replenishment and unlimited issuance of cards. Best for affiliate marketing and company usages",
+        "icon": "/images/Feature/icon3.svg",
+        "buttonText": "See more"
+      }
+    ],
+    "contests": {
+      "list": [
+        {
+          "title": "MAC’2025",
+          "description": "We are very pleased to be present at MAC25 in Yerevan on May 20-21 as a sponsor, and we will be happy to meet you in person! This is a great opportunity to discuss partnerships, new proposals, and promising strategies at a beautiful country, Armenia.",
+          "image": "/images/Contest/contest1.png"
+        },
+        {
+          "title": "BROCONF 5",
+          "description": "We are glad to meet industry leaders, advertisers and experts from all around the world at the largest anniversary conference and most legendary conference in the field of arbitration and affiliate marketing! Admin is a pioneer in the Advertising Accounts Agency field, with recent accounts that made the industry go viral (yet elegant). We have 9+ years in the industry and a big team of more than 100 support staff who have been serving many BIG NAMES in the industry! We’re looking forward to come back for the event soon.",
+          "image": "/images/Contest/contest2.png"
+        },
+        {
+          "title": "BROCONF 4",
+          "description": "The fourth conference from the creators of the arbitration card service BroCard — BROCONF 4 started from October 2 to 3 at the MTS Live Hall in Moscow. We have a chance to meet new market players, say hi in person with our existing customer and start cooperating with some of our great partners.",
+          "image": "/images/Contest/contest3.png"
+        },
+        {
+          "title": "AFFILIATE WORLD ASIA 2024",
+          "description": "With the theme “Connect. Innovate. Dominate”, this event welcomes affiliate marketing and e-commerce leaders from all around the world to Bangkok. Day 1 and 2 packed us with powerful insights, more learning and networking! AWA is truly more than a conference!",
+          "image": "/images/Contest/contest4.png"
+        }
+      ]
+    },
+    "footer": {
+      "contactUsTitle": "Contact Us",
+      "emailLabel": "Email",
+      "emailValue": "thutranotp@gmail.com",
+      "addressLabel": "Address",
+      "addressValue": "New Bridge Road, Singapore",
+      "copyright": "©2025 All right reversed"
     }
   }
 }

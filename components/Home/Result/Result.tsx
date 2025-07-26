@@ -4,49 +4,39 @@ import Container from "@/components/Common/Container";
 import { MoveLeft, MoveRight } from "lucide-react";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl"; // Import useTranslations
+
+// Define a type for your result view items for better type safety
+type ResultViewItem = {
+  image: string;
+  dateRange: string;
+  campaignCount: number;
+  approacher: string;
+  costPerResult: string;
+  totalExpenditure: string;
+  status: string;
+};
 
 const Result = () => {
+  // Scope translations to the 'HomePage.results' section
+  const t = useTranslations("HomePage.results");
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1); // 1: next, -1: prev
 
-  const RESULT_VIEW = [
-    {
-      image: "/images/Results/Result1.png",
-      dateRange: "From March 01, 2025 to April 11, 2025",
-      campaignCount: 23,
-      approacher: "6,041,965",
-      costPerResult: "$51.97",
-      totalExpenditure: "$124,209.95",
-      status: "In process",
-    },
-    {
-      image: "/images/Results/Result2.png",
-      dateRange: "From March 11, 2025 - April 11, 2025",
-      campaignCount: 108,
-      approacher: "29,415,509",
-      costPerResult: "$ ---",
-      totalExpenditure: "$65,421.27",
-      status: "In process",
-    },
-    {
-      image: "/images/Results/Result3.png",
-      dateRange: "February 15, 2025 - April 17, 2025",
-      campaignCount: 23,
-      approacher: "16,347,235",
-      costPerResult: "$ ---",
-      totalExpenditure: "$1,853,633",
-      status: "Ongoing",
-    },
-    {
-      image: "/images/Results/Result4.png",
-      dateRange: "February 3, 2025 - June 26, 2025",
-      campaignCount: 23,
-      approacher: "483,006",
-      costPerResult: "$59.96",
-      totalExpenditure: "$1,486,089",
-      status: "In process",
-    },
-  ];
+  // Fetch the RESULT_VIEW array directly from the translations
+  // Use `t.raw()` to get the untranslated (raw) JSON array.
+  const RESULT_VIEW: ResultViewItem[] = t.raw("views");
+
+  // Fetch the labels for the stats
+  const labels = {
+    campaignsPrefix: t("labels.campaignsPrefix"),
+    campaignsSuffix: t("labels.campaignsSuffix"),
+    approacher: t("labels.approacher"),
+    costPerResult: t("labels.costPerResult"),
+    totalExpenditure: t("labels.totalExpenditure"),
+    statusEnd: t("labels.statusEnd"),
+  };
 
   const handlePrev = () => {
     setDirection(-1);
@@ -77,6 +67,7 @@ const Result = () => {
               className="w-full"
             />
             <p className="text-sm text-white mt-3 font-tektur">
+              {/* Use dateRange directly from the fetched RESULT_VIEW */}
               {RESULT_VIEW[currentIndex].dateRange}
             </p>
           </div>
@@ -84,7 +75,9 @@ const Result = () => {
           {/* Right: Stats */}
           <div className="basis-1/2 flex flex-col justify-end gap-2 text-white">
             <p className="font-normal mb-6 font-tektur text-2xl">
-              Results from {RESULT_VIEW[currentIndex].campaignCount} campaigns
+              {/* Use translations for "Results from" and "campaigns" */}
+              {labels.campaignsPrefix} {RESULT_VIEW[currentIndex].campaignCount}{" "}
+              {labels.campaignsSuffix}
             </p>
             <div className="grid min-[400px]:grid-cols-2 grid-cols-1 gap-6 w-full">
               <p className="flex flex-col gap-1 font-tektur">
@@ -92,26 +85,32 @@ const Result = () => {
                   {RESULT_VIEW[currentIndex].approacher}
                 </span>
                 <span className="text-sm min-[400px]:text-left text-center">
-                  Appoacher
+                  {labels.approacher} {/* Use translated label */}
                 </span>
               </p>
               <p className="flex flex-col gap-1 font-tektur min-[400px]:text-left text-center">
                 <span className="text-primaryGreen font-medium text-2xl font-tektur min-[400px]:text-left text-center">
                   {RESULT_VIEW[currentIndex].costPerResult}
                 </span>
-                <span className="text-sm">Cost per result</span>
+                <span className="text-sm">
+                  {labels.costPerResult} {/* Use translated label */}
+                </span>
               </p>
               <p className="flex flex-col gap-1 font-tektur min-[400px]:text-left text-center">
                 <span className="text-yellow-300 font-medium text-2xl font-tektur min-[400px]:text-left text-center">
                   {RESULT_VIEW[currentIndex].totalExpenditure}
                 </span>
-                <span className="text-sm">Total expenditure</span>
+                <span className="text-sm">
+                  {labels.totalExpenditure} {/* Use translated label */}
+                </span>
               </p>
               <p className="flex flex-col gap-1 font-tektur min-[400px]:text-left text-center">
                 <span className="text-primaryGreen font-medium text-2xl font-tektur min-[400px]:text-left text-center">
                   {RESULT_VIEW[currentIndex].status}
                 </span>
-                <span className="text-sm">End</span>
+                <span className="text-sm">
+                  {labels.statusEnd} {/* Use translated label */}
+                </span>
               </p>
             </div>
 

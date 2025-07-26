@@ -4,16 +4,31 @@ import Container from "@/components/Common/Container";
 import React from "react";
 import { Plus } from "lucide-react";
 import { motion } from "framer-motion";
-import Services from "./Services";
+import { useTranslations } from "next-intl"; // Make sure this is imported
 
-interface AboutAdwinProps {
-  aboutData: {
+// No longer need a prop for aboutData, as it's fetched internally
+// interface AboutAdwinProps {
+//   aboutData: {
+//     title: string;
+//     des: string;
+//   }[];
+// }
+
+const AboutAdwin = () => {
+  // Removed aboutData prop
+  // Scope translations to the 'aboutAdwin' section for easier access
+  const t = useTranslations("HomePage.aboutAdwin");
+
+  // Define a type for type safety when working with the fetched array
+  type StatItem = {
     title: string;
-    des: string;
-  }[];
-}
+    description: string;
+  };
 
-const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
+  // Fetch the 'stats' array directly from the translations.
+  // `t.raw("stats")` gives you the untranslated (raw) JavaScript array/object.
+  const AboutData: StatItem[] = t.raw("stats");
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -51,11 +66,9 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
     {
       url: "/images/PartnerBrand/brand1.svg",
     },
-
     {
       url: "/images/PartnerBrand/brand2.svg",
     },
-
     {
       url: "/images/PartnerBrand/brand3.svg",
     },
@@ -75,15 +88,13 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
             className="font-tektur text-[55px] font-normal lg:text-left text-center"
             variants={textVariants as any}
           >
-            About Adwin
+            {t("title")} {/* Fetches "About Adwin" or "Об Adwin" */}
           </motion.h2>
           <motion.p
             className="font-inter text-base font-normal xl:whitespace-pre-line opacity-70 max-w-[550px] lg:text-left text-center"
             variants={textVariants as any}
           >
-            {
-              "Pioneering in the Facebook accounts rental service with many\nlarge teams serving affiliate marketing community. Issuing virtual\ncards backed by solid financial support."
-            }
+            {t("description")} {/* Fetches the main description */}
           </motion.p>
         </motion.div>
 
@@ -95,17 +106,19 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <div className="flex flex-row md:gap-12 gap-4 ">
-            {aboutData?.map((feature, idx) => (
+            {/* Map over the AboutData array, which now contains the translated stats */}
+            {AboutData?.map((feature, idx) => (
               <motion.div
                 className="flex flex-col gap-4 items-start justify-center"
                 key={idx}
                 variants={itemVariants}
               >
                 <h3 className="text-primaryGreen font-semibold font-tektur text-3xl">
-                  {feature.title}
+                  {feature.title} {/* Uses the title from the JSON array */}
                 </h3>
                 <p className="md:text-sm text-xs text-white opacity-70 font-normal">
-                  {feature.des}
+                  {feature.description}{" "}
+                  {/* Uses the description from the JSON array */}
                 </p>
               </motion.div>
             ))}
@@ -129,7 +142,9 @@ const AboutAdwin = ({ aboutData }: AboutAdwinProps) => {
               </div>
             </div>
 
-            <p className="text-2xl text-white font-tektur">Partner</p>
+            <p className="text-2xl text-white font-tektur">
+              {t("partner")} {/* Fetches "Partner" or "Партнер" */}
+            </p>
           </motion.div>
         </motion.div>
       </Container>

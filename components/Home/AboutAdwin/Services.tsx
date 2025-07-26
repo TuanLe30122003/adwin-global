@@ -3,43 +3,35 @@
 import Container from "@/components/Common/Container";
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl"; // Import useTranslations
+
+// Removed SERVICE_DATA hardcoded array
 
 interface IServiceItemProps {
   item: {
     icon: string;
     title: string;
-    des: string;
+    description: string; // Changed 'des' to 'description' for consistency with JSON
   };
   index: number;
 }
 
-const SERVICE_DATA = [
-  {
-    icon: "images/ServiceFeatures/icon1.svg",
-    title: "All Verticals\nAccepted",
-    des: "BH, GH, WH are all accepted",
-  },
-  {
-    icon: "images/ServiceFeatures/icon2.svg",
-    title: "Diverse, Scalable\nAccounts",
-    des: "Include all types of accounts and unlimited spending",
-  },
-  {
-    icon: "images/ServiceFeatures/icon3.svg",
-    title: "High-Quality,\nWarmed-up Assets",
-    des: "Include old and well-spent accounts, pre-warmed up!",
-  },
-  {
-    icon: "images/ServiceFeatures/icon4.svg",
-    title: "Support around\nthe clock",
-    des: "Personal support team in hand 24/7",
-  },
-];
-
 const Services = () => {
+  // Scope translations to the 'HomePage' section
+  const t = useTranslations("HomePage");
+
+  // Fetch the serviceFeatures array directly from the translations
+  // Use `t.raw()` to get the untranslated (raw) JSON array.
+  // Cast it to the correct type for TypeScript
+  const SERVICE_DATA = t.raw("serviceFeatures") as {
+    icon: string;
+    title: string;
+    description: string; // Use 'description' here
+  }[];
+
   return (
     <Container className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-9 w-full max-w-[1440px] mt-10">
-      {SERVICE_DATA.map((item, index) => {
+      {SERVICE_DATA?.map((item, index) => {
         return <ServiceItem key={index} item={item} index={index} />;
       })}
     </Container>
@@ -60,10 +52,10 @@ const ServiceItem = ({ item, index }: IServiceItemProps) => {
       </div>
 
       <h4 className="text-xl text-white font-orbitron whitespace-pre-line mb-[10px]">
-        {item.title}
+        {item.title} {/* This text will now be translated */}
       </h4>
       <p className="font-inter text-base whitespace-pre-line max-w-[80%] text-[#D9D9D9]">
-        {item.des}
+        {item.description} {/* This text will now be translated */}
       </p>
     </motion.div>
   );

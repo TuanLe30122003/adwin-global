@@ -34,23 +34,6 @@ export default async function HomePage() {
     },
   ];
 
-  const AboutData = [
-    {
-      title: "$15M+",
-      des: "Monthly spending",
-    },
-
-    {
-      title: "1000+",
-      des: "Media buying teams",
-    },
-
-    {
-      title: "5Y>",
-      des: "Experiences",
-    },
-  ];
-
   return (
     <div>
       {" "}
@@ -58,7 +41,7 @@ export default async function HomePage() {
         <Hero heroData={heroData} />
       </div>
       <div className="w-full flex flex-col items-center">
-        <AboutAdwin aboutData={AboutData} />
+        <AboutAdwin />
         <Services />
         <GeneralInfo />
         <Result />

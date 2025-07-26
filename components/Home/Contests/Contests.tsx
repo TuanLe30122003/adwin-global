@@ -4,12 +4,16 @@ import Container from "@/components/Common/Container";
 import { MoveLeft, MoveRight } from "lucide-react";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl"; // Import useTranslations
 
 // Animation variants
 const slideVariants = {
-  initial: { opacity: 0, x: 100 },
+  initial: (direction: number) => ({
+    opacity: 0,
+    x: direction > 0 ? 100 : -100,
+  }),
   animate: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: -100 },
+  exit: (direction: number) => ({ opacity: 0, x: direction > 0 ? -100 : 100 }),
   transition: { duration: 0.4, ease: "easeInOut" },
 };
 
@@ -19,53 +23,41 @@ interface IContestItemProps {
   image: string;
 }
 
-const contestList: IContestItemProps[] = [
-  {
-    title: "MAC’2025",
-    description:
-      "We are very pleased to be present at MAC25 in Yerevan on May 20-21 as a sponsor, and we will be happy to meet you in person! This is a great opportunity to discuss partnerships, new proposals, and promising strategies at a beautiful country, Armenia.",
-    image: "/images/Contest/contest1.png",
-  },
-  {
-    title: "BROCONF 5",
-    description:
-      "We are glad to meet industry leaders, advertisers and experts from all around the world at the largest anniversary conference and most legendary conference in the field of arbitration and affiliate marketing! Admin is a pioneer in the Advertising Accounts Agency field, with recent accounts that made the industry go viral (yet elegant). We have 9+ years in the industry and a big team of more than 100 support staff who have been serving many BIG NAMES in the industry! We’re looking forward to come back for the event soon.",
-    image: "/images/Contest/contest2.png",
-  },
-  {
-    title: "BROCONF 4",
-    description:
-      "The fourth conference from the creators of the arbitration card service BroCard — BROCONF 4 started from October 2 to 3 at the MTS Live Hall in Moscow. We have a chance to meet new market players, say hi in person with our existing customer and start cooperating with some of our great partners.",
-    image: "/images/Contest/contest3.png",
-  },
-  {
-    title: "AFFILIATE WORLD ASIA 2024",
-    description:
-      "With the theme “Connect. Innovate. Dominate”, this event welcomes affiliate marketing and e-commerce leaders from all around the world to Bangkok. Day 1 and 2 packed us with powerful insights, more learning and networking! AWA is truly more than a conference!",
-    image: "/images/Contest/contest4.png",
-  },
-];
+// Removed hardcoded contestList
 
 const Contests = () => {
+  // Scope translations to the 'HomePage.contests' section
+  const t = useTranslations("HomePage.contests");
+
+  // Fetch the contestList array directly from the translations
+  // Use `t.raw()` to get the untranslated (raw) JSON array.
+  const contestList: IContestItemProps[] = t.raw("list");
+
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(1); // 1: next, -1: prev
 
   const handlePrev = () => {
+    setDirection(-1); // Set direction for previous slide
     setCurrentIndex((prev) => (prev === 0 ? contestList.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
+    setDirection(1); // Set direction for next slide
     setCurrentIndex((prev) => (prev === contestList.length - 1 ? 0 : prev + 1));
   };
 
   return (
     <Container className="flex flex-col max-w-[1440px] w-full mt-40 overflow-hidden">
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" custom={direction}>
+        {" "}
+        {/* Pass custom prop to AnimatePresence */}
         <motion.div
-          key={currentIndex} // Very important for AnimatePresence
+          key={currentIndex} // Important for AnimatePresence
           variants={slideVariants}
           initial="initial"
           animate="animate"
           exit="exit"
+          custom={direction} // Pass custom prop (direction) to motion.div
           transition={slideVariants.transition as any}
         >
           <ContestItem
@@ -104,10 +96,10 @@ const ContestItem = ({
       <div className="flex flex-col justify-between h-full lg:min-h-[350px]">
         <div>
           <h4 className="font-tektur mb-2 text-primaryGreen font-medium text-3xl">
-            {title}
+            {title} {/* This text is already translated */}
           </h4>
           <p className="text-white opacity-70 text-sm/[30px] font-inter lg:line-clamp-none md:line-clamp-4 line-clamp-none">
-            {description}
+            {description} {/* This text is already translated */}
           </p>
         </div>
 

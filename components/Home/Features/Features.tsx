@@ -5,39 +5,35 @@ import CustomButton from "@/components/Common/CustomButton";
 import React from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from "next-intl"; // Import useTranslations
 
+// Removed hardcoded FEATURES array
+
+// Updated interface to match JSON structure and include buttonText
 interface FeatureSectionProps {
   id: string;
   title: string;
   description: string;
-  imgSrc: string;
+  icon: string; // Changed imgSrc to icon to match JSON
+  buttonText: string; // Added buttonText
   isReverse?: boolean;
 }
 
-const FEATURES = [
-  {
-    id: "01",
-    title: "Charge from only 1%",
-    description:
-      "Compromised cost for advertiser and company! Simply just a commission. Pay only when you top-up balance, everything else is free!",
-    icon: "/images/Feature/icon1.svg", // thay bằng đường dẫn thực tế
-  },
-  {
-    id: "02",
-    title: "Trusted BIN",
-    description: "BIN from Hongkong, US, Singapore\nand much more!",
-    icon: "/images/Feature/icon2.svg", // thay bằng đường dẫn thực tế
-  },
-  {
-    id: "03",
-    title: "Instant replenishment",
-    description:
-      "Instant replenishment and unlimited issuance of cards. Best for affiliate marketing and company usages",
-    icon: "/images/Feature/icon3.svg", // thay bằng đường dẫn thực tế
-  },
-];
-
 const Features = () => {
+  // Scope translations to the 'HomePage' section
+  const t = useTranslations("HomePage");
+
+  // Fetch the featureSections array directly from the translations
+  // Use `t.raw()` to get the untranslated (raw) JSON array.
+  // Cast it to the correct type for TypeScript
+  const FEATURES = t.raw("featureSections") as {
+    id: string;
+    title: string;
+    description: string;
+    icon: string;
+    buttonText: string;
+  }[];
+
   return (
     <Container className="flex flex-col gap-20 w-full mt-20 max-w-[1440px] overflow-hidden">
       {FEATURES.map((feature) => (
@@ -46,7 +42,8 @@ const Features = () => {
           id={feature.id}
           title={feature.title}
           description={feature.description}
-          imgSrc={feature.icon}
+          icon={feature.icon} // Pass icon instead of imgSrc
+          buttonText={feature.buttonText} // Pass buttonText
           isReverse={feature.id === "02"} // Reverse the second feature
         />
       ))}
@@ -58,7 +55,8 @@ const FeatureSection = ({
   id,
   title,
   description,
-  imgSrc,
+  icon, // Changed imgSrc to icon
+  buttonText, // New prop
   isReverse,
 }: FeatureSectionProps) => {
   const ref = useRef(null);
@@ -80,7 +78,7 @@ const FeatureSection = ({
         }`}
       >
         <div className="border border-primaryGreen min-h-[200px] flex flex-row justify-center items-center md:min-w-[160px] min-w-[120px]">
-          <img src={imgSrc} alt={title} />
+          <img src={icon} alt={title} /> {/* Use icon */}
         </div>
         <div
           className={`flex flex-col justify-between h-full min-h-[200px] ${
@@ -93,15 +91,15 @@ const FeatureSection = ({
                 isReverse ? "text-right" : "text-left"
               }`}
             >
-              {title}
+              {title} {/* This text is already translated */}
             </h3>
             <p className="font-inter md:text-base/[28px] text-sm text-white mt-2 max-w-[400px] opacity-70 line-clamp-4">
-              {description}
+              {description} {/* This text is already translated */}
             </p>
           </div>
 
           <CustomButton className="font-tektur md:w-[175px] w-[120px] text-deepDark bg-[#37FD76] hover:bg-[#fff] mt-3 py-2 px-4 md:text-lg text-sm">
-            See more
+            {buttonText} {/* This text is already translated */}
           </CustomButton>
         </div>
       </div>
