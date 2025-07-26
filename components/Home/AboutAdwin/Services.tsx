@@ -4,6 +4,7 @@ import Container from "@/components/Common/Container";
 import React from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl"; // Import useTranslations
+import CustomButton from "@/components/Common/CustomButton";
 
 // Removed SERVICE_DATA hardcoded array
 
@@ -45,7 +46,7 @@ const ServiceItem = ({ item, index }: IServiceItemProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="border border-primaryGreen p-8 flex flex-col items-start md:min-h-[300px] basis-1/4 bg-[#0C1618]"
+      className="border border-primaryGreen p-8 flex flex-col items-start md:min-h-[300px] basis-1/4 bg-[#0C1618] relative z-10"
     >
       <div className="w-[50px] h-[50px] bg-primaryGreen flex justify-center items-center mb-5">
         <img src={item.icon} alt="service" />
@@ -57,6 +58,8 @@ const ServiceItem = ({ item, index }: IServiceItemProps) => {
       <p className="font-inter text-base whitespace-pre-line max-w-[80%] text-[#D9D9D9]">
         {item.description} {/* This text will now be translated */}
       </p>
+
+      <div className="absolute right-[-24px] top-[-24px] w-12 h-12 border-b border-primaryGreen rotate-45 z-11 bg-[#050D10]"></div>
     </motion.div>
   );
 };

@@ -35,7 +35,7 @@ const ComingSoon = () => {
         </motion.p>
 
         <motion.div
-          className="lg:mt-[-150px] sm:mt-[-130px] min-[400px]:mt-[-130px] mt-[-70px] md:scale-100 scale-75"
+          className="lg:mt-[-150px] sm:mt-[-130px] min-[400px]:mt-[-100px] mt-[-70px] md:scale-100 scale-75"
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
