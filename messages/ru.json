@@ -138,21 +138,21 @@
         "id": "01",
         "title": "Комиссия от 1%",
         "description": "Компромиссная стоимость для рекламодателя и компании! Просто комиссия. Платите только при пополнении баланса, все остальное бесплатно!",
-        "icon": "/images/Feature/icon1.svg",
+        "icon": "/images/Feature/Icon1.svg",
         "buttonText": "Подробнее"
       },
       {
         "id": "02",
         "title": "Надежный BIN",
         "description": "BIN из Гонконга, США, Сингапура\nи многого другого!",
-        "icon": "/images/Feature/icon2.svg",
+        "icon": "/images/Feature/Icon2.svg",
         "buttonText": "Подробнее"
       },
       {
         "id": "03",
         "title": "Мгновенное пополнение",
         "description": "Мгновенное пополнение и неограниченный выпуск карт. Лучше всего подходит для аффилированного маркетинга и использования компаниями",
-        "icon": "/images/Feature/icon3.svg",
+        "icon": "/images/Feature/Icon3.svg",
         "buttonText": "Подробнее"
       }
     ],
