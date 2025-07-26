@@ -10,6 +10,7 @@ import "./globals.css";
 // Inter: Một font sans-serif hiện đại, phổ biến cho nội dung
 import { Inter, Tektur, Orbitron } from "next/font/google"; // Nhập cả 3 font
 import Header from "@/components/Common/Header";
+import Footer from "@/components/Common/Footer";
 
 // Khai báo font Inter
 const inter = Inter({
@@ -76,6 +77,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

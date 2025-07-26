@@ -20,6 +20,14 @@ body {
   background-size:cover;
 }
 
+.outlineText {
+  color: transparent;
+  -webkit-text-stroke: 0.5px #ffffff; /* màu viền, ví dụ: green-400 */
+  text-transform: uppercase;
+  font-weight: semi-bold; ;
+  letter-spacing: 2px;
+}
+
 .gradient-1 {
   background: linear-gradient(180deg, #0C1618 3.82%, #37FD76 198.56%);
 }

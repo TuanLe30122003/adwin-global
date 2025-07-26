@@ -30,7 +30,7 @@ export default function LocaleSwitcher() {
       }}
     >
       {/* Hiển thị locale hiện tại từ next-intl */}
-      <p className="uppercase font-tektur">{locale}</p>
+      <p className="uppercase font-tektur">{locale === "en" ? "ru" : "en"}</p>
     </div>
   );
 }
