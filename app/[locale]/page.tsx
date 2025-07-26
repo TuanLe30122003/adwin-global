@@ -2,6 +2,7 @@ import AboutAdwin from "@/components/Home/AboutAdwin/AboutAdwin";
 import GeneralInfo from "@/components/Home/AboutAdwin/GeneralInfo";
 import Services from "@/components/Home/AboutAdwin/Services";
 import ComingSoon from "@/components/Home/ComingSoon/ComingSoon";
+import Features from "@/components/Home/Features/Features";
 import Hero from "@/components/Home/Hero/Hero";
 import Result from "@/components/Home/Result/Result";
 import { getTranslations } from "next-intl/server";
@@ -61,6 +62,7 @@ export default async function HomePage() {
         <GeneralInfo />
         <Result />
         <ComingSoon />
+        <Features />
       </div>
       <div className="w-full h-[100px]"></div>
     </div>
