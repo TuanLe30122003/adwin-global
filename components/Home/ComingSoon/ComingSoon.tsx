@@ -50,7 +50,7 @@ const ComingSoon = () => {
       </motion.div>
 
       <motion.div
-        className="md:min-h-[400px] min-h-[300px] min-[1800px]:hidden flex transition-all duration-150 background-effect-2 w-[200vw] object-top sm:mt-[-400px] min-[400px]:mt-[-300px] mt-[-250px] z-1"
+        className="md:min-h-[400px] min-h-[300px] min-[1800px]:hidden flex transition-all duration-150 background-effect-2 w-[180vw] object-top sm:mt-[-400px] min-[400px]:mt-[-300px] mt-[-250px] z-1"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 1 }}
