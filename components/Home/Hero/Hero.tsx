@@ -94,7 +94,10 @@ const Hero = ({ heroData }: HeroProps) => {
         </motion.p>
         <motion.div variants={itemVariants}>
           {" "}
-          <CustomButton className="font-tektur mt-8 min-w-[175px] text-deepDark bg-[#37FD76] hover:bg-[#fff] py-2 px-4 text-lg">
+          <CustomButton
+            className="font-tektur mt-8 min-w-[175px] text-deepDark bg-[#37FD76] hover:bg-[#fff] py-2 px-4 text-lg"
+            onClick={() => window.open("https://t.me/emmatranle", "_blank")}
+          >
             {activeView?.cta}
           </CustomButton>
         </motion.div>

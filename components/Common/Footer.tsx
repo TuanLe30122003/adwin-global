@@ -20,7 +20,7 @@ const Footer = () => {
           <p className="font-tektur text-3xl mb-4">
             {t("contactUsTitle")} {/* Translate "Contact Us" */}
           </p>
-          <div className="flex flex-col justify-start items-start xl:ml-20 md:ml-10 font-inter">
+          <div className="flex flex-row gap-16 justify-start items-start xl:ml-20 md:ml-10 font-inter">
             <div className="text-sm opacity-80 leading-6 font-inter">
               <p>
                 <span className="font-semibold">
@@ -33,6 +33,20 @@ const Footer = () => {
                   {t("addressLabel")}: {/* Translate "Address" label */}
                 </span>{" "}
                 {t("addressValue")} {/* Translate "Address" value */}
+              </p>
+            </div>
+
+            <div className="text-sm opacity-80 leading-6 font-inter">
+              <a
+                href="https://t.me/emmatranle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer text-sm opacity-80 leading-6 font-inter"
+              >
+                <span className="font-semibold">Telegram</span>
+              </a>
+              <p>
+                <span className="font-semibold">Wechat</span>
               </p>
             </div>
           </div>
