@@ -29,9 +29,9 @@ export default function ScrollToTopButton() {
         <motion.div
           className="fixed bottom-28 right-28 cursor-pointer md:flex hidden"
           onClick={scrollToTop}
-          initial={{ opacity: 0, scale: 0.5, y: 50 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.5, y: 50 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <img src="/scroll.svg" alt="Scroll to top" />
