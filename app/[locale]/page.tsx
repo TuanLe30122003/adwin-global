@@ -1,3 +1,4 @@
+import ScrollToTopButton from "@/components/Common/ScrollToTop";
 import AboutAdwin from "@/components/Home/AboutAdwin/AboutAdwin";
 import GeneralInfo from "@/components/Home/AboutAdwin/GeneralInfo";
 import Services from "@/components/Home/AboutAdwin/Services";
@@ -50,9 +51,7 @@ export default async function HomePage() {
         <Contests />
       </div>
       <div className="w-full h-[100px]"></div>
-      <div className="fixed bottom-28 right-28 cursor-pointer md:flex hidden">
-        <img src="/scroll.svg" alt="" />
-      </div>
+      <ScrollToTopButton />
     </div>
   );
 }
