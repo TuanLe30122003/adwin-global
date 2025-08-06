@@ -50,6 +50,9 @@ export default async function HomePage() {
         <Contests />
       </div>
       <div className="w-full h-[100px]"></div>
+      <div className="fixed bottom-28 right-28 cursor-pointer md:flex hidden">
+        <img src="/scroll.svg" alt="" />
+      </div>
     </div>
   );
 }

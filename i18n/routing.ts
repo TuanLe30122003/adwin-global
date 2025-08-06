@@ -3,7 +3,7 @@ import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
   // A list of all locales that are supported
-  locales: ["en", "ru"],
+  locales: ["en", "ru", "zh"],
   // locales: ["en", "fr", "de", "ru"],
 
   // Used when no locale matches
@@ -13,7 +13,8 @@ export const routing = defineRouting({
       en: "/contact-me",
       // fr: "/contactez-moi",
       // de: "/kontaktiere-mich",
-      ru: '/contact'
+      ru: '/contact',
+      zh: '/contact'
     },
   },
 });

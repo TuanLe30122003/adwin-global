@@ -1,0 +1,192 @@
+{
+  "HomePage": {
+    "title": "你好，世界！",
+    "welcome": {
+      "title": "欢迎来到主页"
+    },
+    "heroViews": {
+      "1": {
+        "title": "您值得信赖的服务商",
+        "description": "账户代理行业的先驱，提供\n补贴虚拟卡，费用最低。\n一站式联盟营销解决方案"
+      },
+      "2": {
+        "title": "虚拟卡",
+        "description": "通过 API 系统发行虚拟卡，\n一级 BIN，卡片无限补充。\n适用于买家和公司"
+      }
+    },
+    "headline": "FACEBOOK 账户代理",
+    "cta": "联系我们",
+    "features": {
+      "smartPixel": "智能像素",
+      "refundPolicy": "退款政策",
+      "support247": "全天候支持"
+    },
+    "aboutAdwin": {
+      "title": "关于 Adwin",
+      "description": "在 Facebook 账户租赁服务领域处于领先地位，\n拥有众多大型团队服务于联盟营销社群。\n发行由强大资金支持的虚拟卡。",
+      "partner": "合作伙伴",
+      "stats": [
+        {
+          "title": "$15M+",
+          "description": "每月花费"
+        },
+        {
+          "title": "1000+",
+          "description": "媒体购买团队"
+        },
+        {
+          "title": "5Y>",
+          "description": "行业经验"
+        }
+      ]
+    },
+    "serviceFeatures": [
+      {
+        "icon": "images/ServiceFeatures/icon1.svg",
+        "title": "所有垂直领域\n均可接受",
+        "description": "BH、GH、WH 全部接受"
+      },
+      {
+        "icon": "images/ServiceFeatures/icon2.svg",
+        "title": "多样化、可扩展\n账户",
+        "description": "涵盖所有类型账户及无限支出"
+      },
+      {
+        "icon": "images/ServiceFeatures/icon3.svg",
+        "title": "高质量\n预热资产",
+        "description": "包含旧账户和高支出账户，预热完毕！"
+      },
+      {
+        "icon": "images/ServiceFeatures/icon4.svg",
+        "title": "全天候\n支持服务",
+        "description": "专属支持团队全天待命"
+      }
+    ],
+    "generalInfo": {
+      "smartPixel": {
+        "title": "智能像素集成，实现即时启动与优化",
+        "button": "查看更多"
+      },
+      "geoSupport": {
+        "title": "支持所有地区、\n货币与时区",
+        "items": [
+          "正确的 IP 与 GEO 匹配",
+          "本地货币设置",
+          "匹配时区"
+        ]
+      },
+      "speedAndScale": {
+        "title": "为速度与扩展而构建",
+        "items": [
+          "已预热老账户",
+          "AdsPower 授权",
+          "专用 VPS",
+          "内含浏览器配置"
+        ]
+      }
+    },
+    "results": {
+      "labels": {
+        "campaignsPrefix": "来自",
+        "campaignsSuffix": "个活动的结果",
+        "approacher": "触达人数",
+        "costPerResult": "每个结果的成本",
+        "totalExpenditure": "总支出",
+        "statusEnd": "已结束"
+      },
+      "views": [
+        {
+          "image": "/images/Results/Result1.png",
+          "dateRange": "2025年3月1日 - 2025年4月11日",
+          "campaignCount": 23,
+          "approacher": "6,041,965",
+          "costPerResult": "$51.97",
+          "totalExpenditure": "$124,209.95",
+          "status": "进行中"
+        },
+        {
+          "image": "/images/Results/Result2.png",
+          "dateRange": "2025年3月11日 - 2025年4月11日",
+          "campaignCount": 108,
+          "approacher": "29,415,509",
+          "costPerResult": "$ ---",
+          "totalExpenditure": "$65,421.27",
+          "status": "进行中"
+        },
+        {
+          "image": "/images/Results/Result3.png",
+          "dateRange": "2025年2月15日 - 2025年4月17日",
+          "campaignCount": 23,
+          "approacher": "16,347,235",
+          "costPerResult": "$ ---",
+          "totalExpenditure": "$1,853,633",
+          "status": "进行中"
+        },
+        {
+          "image": "/images/Results/Result4.png",
+          "dateRange": "2025年2月3日 - 2025年6月26日",
+          "campaignCount": 23,
+          "approacher": "483,006",
+          "costPerResult": "$59.96",
+          "totalExpenditure": "$1,486,089",
+          "status": "进行中"
+        }
+      ]
+    },
+    "featureSections": [
+      {
+        "id": "01",
+        "title": "仅收取1%起",
+        "description": "广告主和公司成本可控！仅收取充值佣金，其他全部免费！",
+        "icon": "/images/Feature/Icon1.svg",
+        "buttonText": "查看更多"
+      },
+      {
+        "id": "02",
+        "title": "可信 BIN",
+        "description": "来自香港、美国、新加坡等地的 BIN",
+        "icon": "/images/Feature/Icon2.svg",
+        "buttonText": "查看更多"
+      },
+      {
+        "id": "03",
+        "title": "即时补卡",
+        "description": "即时补卡、无限制发行卡片。非常适合联盟营销和企业使用",
+        "icon": "/images/Feature/Icon3.svg",
+        "buttonText": "查看更多"
+      }
+    ],
+    "contests": {
+      "list": [
+        {
+          "title": "MAC’2025",
+          "description": "我们很高兴以赞助商身份出席于5月20日至21日在埃里温举行的 MAC25，并期待与您见面！这是一个绝佳机会，可以在美丽的亚美尼亚探讨合作、新提案及战略方向。",
+          "image": "/images/Contest/contest1.png"
+        },
+        {
+          "title": "BROCONF 5",
+          "description": "我们很荣幸能在这一最大规模、最具传奇色彩的联盟营销大会上与行业领袖、广告商和专家见面！Admin 是广告账户代理行业的先驱，我们在行业内拥有超过9年的经验及100多名支持人员的团队，服务于众多知名客户。期待再次参与此盛会！",
+          "image": "/images/Contest/contest2.png"
+        },
+        {
+          "title": "BROCONF 4",
+          "description": "BROCONF 4 是由 BroCard 仲裁卡服务发起的第四届大会，于10月2日至3日在莫斯科 MTS Live Hall 举行。我们有机会结识新市场参与者，与现有客户面对面交流，并开启与优质伙伴的合作。",
+          "image": "/images/Contest/contest3.png"
+        },
+        {
+          "title": "亚洲联盟世界大会 2024",
+          "description": "以“连接、创新、主宰”为主题，本次大会汇聚了来自全球的联盟营销与电商领袖。两天的日程充满洞见、学习与交流！AWA 远不止一场会议！",
+          "image": "/images/Contest/contest4.png"
+        }
+      ]
+    },
+    "footer": {
+      "contactUsTitle": "联系我们",
+      "emailLabel": "邮箱",
+      "emailValue": "thutranotp@gmail.com",
+      "addressLabel": "地址",
+      "addressValue": "新桥路，新加坡",
+      "copyright": "©2025 版权所有"
+    }
+  }
+}

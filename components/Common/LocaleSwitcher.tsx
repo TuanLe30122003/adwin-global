@@ -5,32 +5,32 @@ import { useParams } from "next/navigation";
 import { Locale, usePathname, useRouter } from "@/i18n/routing";
 
 export default function LocaleSwitcher() {
-  const locale = useLocale();
-
+  const locale = useLocale(); // current locale
   const router = useRouter();
   const pathname = usePathname();
   const params = useParams();
 
+  const availableLocales: Locale[] = ["en", "ru", "zh"]; // <-- thêm zh vào đây
+
   const onSelectChange = (nextLocale: string) => {
     router.replace(
-      // @ts-expect-error -- TypeScript will validate that only known `params`
-      // are used in combination with a given `pathname`. Since the two will
-      // always match for the current route, we can skip runtime checks.
+      // @ts-expect-error - See note in original code
       { pathname, params },
       { locale: nextLocale as Locale }
     );
   };
 
   return (
-    <div
-      className="border border-white py-1 px-[6px] cursor-pointer"
-      onClick={() => {
-        const upcomingLang = locale === "en" ? "ru" : "en";
-        onSelectChange(upcomingLang);
-      }}
+    <select
+      className="border border-white py-1 px-2 bg-black text-white uppercase cursor-pointer font-tektur"
+      value={locale}
+      onChange={(e) => onSelectChange(e.target.value)}
     >
-      {/* Hiển thị locale hiện tại từ next-intl */}
-      <p className="uppercase font-tektur">{locale === "en" ? "ru" : "en"}</p>
-    </div>
+      {availableLocales.map((loc) => (
+        <option key={loc} value={loc}>
+          {loc}
+        </option>
+      ))}
+    </select>
   );
 }
