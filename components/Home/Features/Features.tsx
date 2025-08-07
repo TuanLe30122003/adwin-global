@@ -98,7 +98,10 @@ const FeatureSection = ({
             </p>
           </div>
 
-          <CustomButton className="font-tektur md:w-[175px] w-[120px] text-deepDark bg-[#37FD76] hover:bg-[#fff] mt-3 py-2 px-4 md:text-lg text-sm">
+          <CustomButton
+            className="font-tektur md:w-[175px] w-[120px] text-deepDark bg-[#37FD76] hover:bg-[#fff] mt-3 py-2 px-4 md:text-lg text-sm"
+            onClick={() => window.open("https://t.me/emmatranle", "_blank")}
+          >
             {buttonText} {/* This text is already translated */}
           </CustomButton>
         </div>

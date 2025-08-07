@@ -36,7 +36,10 @@ const GeneralInfo = () => {
           <h4 className="font-tektur text-xl text-center">
             {t("smartPixel.title")} {/* Dịch tiêu đề */}
           </h4>
-          <CustomButton className="font-tektur w-[175px] text-deepDark bg-[#37FD76] hover:bg-[#fff] py-2 px-4 text-lg">
+          <CustomButton
+            className="font-tektur w-[175px] text-deepDark bg-[#37FD76] hover:bg-[#fff] py-2 px-4 text-lg"
+            onClick={() => window.open("https://t.me/emmatranle", "_blank")}
+          >
             {t("smartPixel.button")} {/* Dịch text nút */}
           </CustomButton>
         </div>
